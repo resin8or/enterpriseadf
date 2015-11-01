@@ -20,11 +20,13 @@
         <af:gridRow height="50px" id="pt_gr2">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc2">
                 <!-- Header -->
+                <af:outputText value="#{attrs.PageTitle}" id="pt_ot1" inlineStyle="color:Red; font-size:large;"/>
             </af:gridCell>
         </af:gridRow>
         <af:gridRow height="100%" id="pt_gr1">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1">
                 <!-- Content -->
+                <af:facetRef facetName="main"/>
             </af:gridCell>
         </af:gridRow>
     </af:panelGridLayout>
