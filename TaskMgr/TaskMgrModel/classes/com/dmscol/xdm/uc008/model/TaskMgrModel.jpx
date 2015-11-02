@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TaskMgrModel"
+  Version="12.1.3.10.8"
+  SeparateXMLFiles="true"
+  PackageName="com.dmscol.xdm.uc008.model">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../../../TaskMgrModel.jpr"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
+    <Attr Name="_NamedConnection" Value="xdm"/>
+    <Attr Name="_appModuleNames0" Value="com.dmscol.xdm.uc008.model.am.XdmTaskMgrService"/>
+  </DesignTime>
+  <Containee
+    Name="am"
+    PackageName="com.dmscol.xdm.uc008.model.am"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="model"
+    PackageName="com.dmscol.xdm.uc008.model"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <AppContainee
+    Name="CommonCode"
+    FullName="com.dmscol.xdm.common.CommonCode"
+    ObjectType="JboProject">
+    <DesignTime>
+      <Attr Name="_SourceName" Value="adflibXdmCommonCode.jar"/>
+    </DesignTime>
+  </AppContainee>
+  <AppContainee
+    Name="CommonModel"
+    FullName="com.dmscol.xdm.model.CommonModel"
+    ObjectType="JboProject">
+    <DesignTime>
+      <Attr Name="_SourceName" Value="afdlibXdmCommonModel.jar"/>
+    </DesignTime>
+  </AppContainee>
+</JboProject>

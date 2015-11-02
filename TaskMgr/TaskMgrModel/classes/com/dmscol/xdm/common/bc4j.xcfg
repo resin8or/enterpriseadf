@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.dmscol.xdm.XdmTaskMgrService">
+      <AppModuleConfig name="XdmTaskMgrServiceLocal" ApplicationName="com.dmscol.xdm.XdmTaskMgrService" DeployPlatform="LOCAL" jbo.project="com.dmscol.xdm.uc008.model.TaskMgrModel">
+         <Security AppModuleJndiName="com.dmscol.xdm.XdmTaskMgrService"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="XdmTaskMgrServiceShared" ApplicationName="com.dmscol.xdm.XdmTaskMgrService" DeployPlatform="LOCAL" jbo.project="com.dmscol.xdm.uc008.model.TaskMgrModel">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="com.dmscol.xdm.XdmTaskMgrService"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>
