@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.dmscol.xdm.model.TestXdmCommonModel">
+      <AppModuleConfig name="150C2F00A76" JDBCName="xdm" DeployPlatform="LOCAL" jbo.project="com.dmscol.xdm.model.CommonModel" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="TestXdmCommonModelLocal" ApplicationName="com.dmscol.xdm.model.TestXdmCommonModel" DBconnection="java:comp/env/jdbc/xdmDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="com.dmscol.xdm.model.TestXdmCommonModel"/>
+         <Tester FullProxyInterfaceName="com.dmscol.xdm.model.common.TestXdmCommonModel"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/xdmDS" ns0:_testers_credentials_needed="false" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="com.dmscol.xdm.model.XdmLovService">
+      <AppModuleConfig name="150C317C7F1" JDBCName="xdm" DeployPlatform="LOCAL" jbo.project="com.dmscol.xdm.model.CommonModel" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="XdmLovServiceLocal" ApplicationName="com.dmscol.xdm.model.XdmLovService" DBconnection="java:comp/env/jdbc/xdmDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="com.dmscol.xdm.model.XdmLovService"/>
+         <Tester FullProxyInterfaceName="com.dmscol.xdm.model.common.XdmLovService"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/xdmDS" ns0:_testers_credentials_needed="false" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Meetings"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="MEETINGS"
+  AliasName="Meetings"
+  BindingStyle="OracleName"
+  RowClass="com.dmscol.xdm.common.framework.EntityImpl">
+  <Attribute
+    Name="MeetingsId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="MEETINGS_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="MEETINGS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="MeetingsDesc"
+    Precision="20"
+    ColumnName="MEETINGS_DESC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEETINGS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="StartDate"
+    ColumnName="START_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="MEETINGS"/>
+  <Attribute
+    Name="EndDate"
+    ColumnName="END_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="MEETINGS"/>
+  <Attribute
+    Name="RoomsId"
+    Precision="20"
+    ColumnName="ROOMS_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEETINGS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Rooms"
+    Association="com.dmscol.xdm.model.MeetingsFk1Assoc"
+    AssociationEnd="com.dmscol.xdm.model.MeetingsFk1Assoc.Rooms"
+    AssociationOtherEnd="com.dmscol.xdm.model.MeetingsFk1Assoc.Meetings"
+    Type="com.dmscol.xdm.common.framework.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="MeetingsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="MEETINGS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.dmscol.xdm.model.Meetings.MeetingsId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="MeetingsFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="SYS_C0033733"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="MEETINGS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.dmscol.xdm.model.Meetings.MeetingsId"/>
+    </AttrArray>
+  </Key>
+</Entity>

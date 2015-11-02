@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XdmProgPersFkLink"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  EntityAssociation="com.dmscol.xdm.model.XdmProgPersFkAssoc">
+  <ViewLinkDefEnd
+    Name="XdmPersonsView"
+    Cardinality="1"
+    Source="true"
+    Owner="com.dmscol.xdm.model.XdmPersonsView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="XdmPersonsView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.dmscol.xdm.model.XdmPersonsView.PersId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="XdmProgrammesView"
+    Cardinality="-1"
+    Owner="com.dmscol.xdm.model.XdmProgrammesView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="XdmProgrammesView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.dmscol.xdm.model.XdmProgrammesView.Owner"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

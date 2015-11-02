@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XdmProgrammesView"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="com.dmscol.xdm.common.framework.ViewRowImpl"
+  ComponentClass="com.dmscol.xdm.common.framework.ViewObjectImpl"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="XdmProgrammes"
+    Entity="com.dmscol.xdm.model.XdmProgrammes"/>
+  <ViewAttribute
+    Name="ProgId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProgId"
+    EntityUsage="XdmProgrammes"
+    AliasName="PROG_ID"/>
+  <ViewAttribute
+    Name="EvKey"
+    PrecisionRule="true"
+    EntityAttrName="EvKey"
+    EntityUsage="XdmProgrammes"
+    AliasName="EV_KEY"/>
+  <ViewAttribute
+    Name="Name"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="XdmProgrammes"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="Owner"
+    PrecisionRule="true"
+    EntityAttrName="Owner"
+    EntityUsage="XdmProgrammes"
+    AliasName="OWNER"/>
+  <ViewLinkAccessor
+    Name="XdmTasksView"
+    ViewLink="com.dmscol.xdm.model.XdmProgTaskFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

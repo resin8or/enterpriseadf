@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XdmPersTaskFkAssoc"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="XdmPersons"
+    Cardinality="1"
+    Source="true"
+    Owner="com.dmscol.xdm.model.XdmPersons">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="XdmPersons"/>
+      <Attr Name="_foreignKey" Value="com.dmscol.xdm.model.XdmPersons.XdmPersonsPk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.dmscol.xdm.model.XdmPersons.PersId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="XdmTasks"
+    Cardinality="-1"
+    Owner="com.dmscol.xdm.model.XdmTasks">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="XdmTasks"/>
+      <Attr Name="_foreignKey" Value="com.dmscol.xdm.model.XdmTasks.XdmPersTaskFk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.dmscol.xdm.model.XdmTasks.PersId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

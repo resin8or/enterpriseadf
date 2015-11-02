@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Rooms"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ROOMS"
+  AliasName="Rooms"
+  BindingStyle="OracleName"
+  RowClass="com.dmscol.xdm.common.framework.EntityImpl">
+  <Attribute
+    Name="RoomId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="ROOM_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ROOMS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="RoomDesc"
+    Precision="200"
+    ColumnName="ROOM_DESC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ROOMS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Meetings"
+    Association="com.dmscol.xdm.model.MeetingsFk1Assoc"
+    AssociationEnd="com.dmscol.xdm.model.MeetingsFk1Assoc.Meetings"
+    AssociationOtherEnd="com.dmscol.xdm.model.MeetingsFk1Assoc.Rooms"
+    Type="com.dmscol.xdm.common.framework.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="SysC0033733"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0033733"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.dmscol.xdm.model.Rooms.RoomId"/>
+    </AttrArray>
+  </Key>
+</Entity>
