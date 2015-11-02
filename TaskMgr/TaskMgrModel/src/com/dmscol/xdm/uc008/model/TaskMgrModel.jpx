@@ -6,11 +6,32 @@
   Name="TaskMgrModel"
   Version="12.1.3.10.8"
   SeparateXMLFiles="true"
-  PackageName="com.dmscol.xdm.uc008.model"
-  ExportIntfPackage="">
+  PackageName="com.dmscol.xdm.uc008.model">
   <DesignTime>
     <Attr Name="_jprName" Value="../../../../../../TaskMgrModel.jpr"/>
-    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
-    <Attr Name="_NamedConnection" Value="Connection1"/>
   </DesignTime>
+  <Containee
+    Name="model"
+    PackageName="com.dmscol.xdm.uc008.model"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <AppContainee
+    Name="CommonCode"
+    FullName="com.dmscol.xdm.common.CommonCode"
+    ObjectType="JboProject">
+    <DesignTime>
+      <Attr Name="_SourceName" Value="adflibXdmCommonCode.jar"/>
+    </DesignTime>
+  </AppContainee>
+  <AppContainee
+    Name="CommonModel"
+    FullName="com.dmscol.xdm.model.CommonModel"
+    ObjectType="JboProject">
+    <DesignTime>
+      <Attr Name="_SourceName" Value="afdlibXdmCommonModel.jar"/>
+    </DesignTime>
+  </AppContainee>
 </JboProject>
