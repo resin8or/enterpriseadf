@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="taskOverviewEditPageDef"
+                Package="com.dmscol.xdm.uc008.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TaskVO1" RangeSize="25" DataControl="XdmTaskMgrServiceDataControl" id="TaskVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TaskVO1Iterator" id="TaskVO1">
+      <nodeDefinition DefName="com.dmscol.xdm.uc008.model.TaskVO" Name="TaskVO10">
+        <AttrNames>
+          <Item Value="TaskId"/>
+          <Item Value="StartDate"/>
+          <Item Value="Text"/>
+          <Item Value="StartDate1"/>
+          <Item Value="FlightNo"/>
+          <Item Value="EndDate"/>
+          <Item Value="EndWhere"/>
+          <Item Value="Pax"/>
+          <Item Value="ElemKey"/>
+          <Item Value="Remarks"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
